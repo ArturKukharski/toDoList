@@ -13,7 +13,8 @@ const AddTask = () => {
 
     const handleClickAddTask = event => {
         event.preventDefault();
-        setToDoList(prevToDoList => [...prevToDoList, { id: new Date().getTime(), name, status: false }])
+        if(name != '')
+            setToDoList(prevToDoList => [...prevToDoList, { id: new Date().getTime(), name, status: false }])
         setName('');
     }
 
