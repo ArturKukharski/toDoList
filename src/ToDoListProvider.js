@@ -7,7 +7,7 @@ export const ToDoListProvider = props => {
     const [toDoList, setToDoList] = useState([
         { id: 1, name: 'Buy food', status: false },
         { id: 2, name: 'Go to gym', status: true },
-        { id: 3, name: 'Talk with mom', status: false }
+        { id: 5, name: 'Talk with mom', status: false }
     ]);
 
     return (

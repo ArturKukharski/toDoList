@@ -1,16 +1,17 @@
 import React, { useState, useContext } from "react";
+
 import { ToDoListContext } from './ToDoListProvider'
 
 const DelTask = ({ id }) => {
 
     const [toDoList, setToDoList] = useContext(ToDoListContext);
 
-    const delTask = id => {
-        setToDoList(prevToDoList => prevToDoList.filter(el => id !== el.id))
+    const handleClickDelTask = id => taskId =>{
+        setToDoList(prevToDoList => prevToDoList.filter(task => id !== task.id))
     }
 
     return (
-        <span className='del' onClick={delTask(id)} >×</span>
+        <span className='delete' onClick={handleClickDelTask(id)} >×</span>
     )
 }
 
