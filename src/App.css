@@ -111,7 +111,7 @@ li .delete:hover{
     margin-right: 20px;
 }
 
-.todolist .addTask{
+.todolist .addtask{
     cursor: pointer;
     background-color: rgb(15, 180, 64);
     border: none;

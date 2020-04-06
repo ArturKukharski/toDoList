@@ -14,14 +14,14 @@ const AddTask = () => {
     const handleClickAddTask = event => {
         event.preventDefault();
         if(name != '')
-            setToDoList(prevToDoList => [...prevToDoList, { id: new Date().getTime(), name, status: false }])
+            setToDoList(prevToDoList => [...prevToDoList, { id: new Date().getTime(), name, isChecked: false }])
         setName('');
     }
 
     return (
         <div className="addnewitem">
             <input type="text" name="name" value={name} onChange={addName} placeholder="Task Name"/>
-            <button onClick={handleClickAddTask} className="addTask">Add task</button>
+            <button onClick={handleClickAddTask} className="addtask">Add task</button>
         </div>
     );
 }

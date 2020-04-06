@@ -9,14 +9,14 @@ const TaskList = () => {
     const handleClickChangeStatus = props => taskId => {
         setToDoList(preToDoList => preToDoList.filter(task => false));
         toDoList.forEach(element => {
-            setToDoList(preToDoList => [...preToDoList, element.id === props.id ? { id: element.id, name: element.name, status: !element.status } : element]);
+            setToDoList(preToDoList => [...preToDoList, element.id === props.id ? { id: element.id, name: element.name, isChecked: !element.isChecked } : element]);
         })
     }
 
     return (
         <React.Fragment>
             {toDoList.map(task => (
-                <Task id={task.id} name={task.name} status={task.status} click={handleClickChangeStatus} />
+                <Task id={task.id} name={task.name} isChecked={task.isChecked} onClick={handleClickChangeStatus} />
             ))}
         </React.Fragment>
     )
